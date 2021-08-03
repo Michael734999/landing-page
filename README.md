@@ -1,0 +1,1 @@
+I created a multi-section landing page, with a dynamically updating navigational menu.
