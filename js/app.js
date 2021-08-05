@@ -37,7 +37,7 @@ function nav() {
         li.innerHTML = `<a class="anchor">${listName[x - 1]}</a>`;
 
         li.addEventListener('click', function(event) {
-            // event.preventDefault();
+            event.preventDefault();
             sections[x - 1].scrollIntoView({ behavior: "smooth" });
         });
     };
@@ -73,7 +73,7 @@ function active() {
                 navList.classList.remove('active');
             }
         });
-    }
+    };
 };
 
 // Add toTop button
@@ -97,7 +97,7 @@ hamBtn.addEventListener('click', () => {
         hamBtn.classList.remove('closed');
         hamBtn.classList.add('open');
 
-        navBr.style.display = "block";
+        navBr.style.display = "flex";
     } else if (hamBtn.className === 'hamBtn open') {
         hamBtn.classList.remove('open');
         hamBtn.classList.add('closed');

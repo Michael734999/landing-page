@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -13,49 +14,20 @@ html {
 }
 
 body {
-    background: #fff;
-    background: linear-gradient(0deg, #fff 0%, rgb(204, 203, 203) 100%);
+    background: rgb(133, 210, 255);
+    background: linear-gradient(0deg, rgb(133, 210, 255) 0%, rgb(0, 9, 58) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
-    color: rgb(20, 20, 20);
+    color: #fff;
 }
 
 
 /* Typeography General*/
 
 h1 {
-    position: relative;
-    top: -10vh;
     font-family: 'Dancing Script', cursive;
     font-size: 3em;
-}
-
-.slogan {
-    position: relative;
-    top: -22vh;
-    color: rgb(0, 0, 0);
-    font-size: 2.25em;
-    font-family: 'Anton', sans-serif;
-}
-
-.btn {
-    position: relative;
-    cursor: pointer;
-    border-radius: 12px;
-    background-color: #fff;
-    padding: 0.5em;
-    width: 8em;
-    height: 3.5em;
-    top: -18vh;
-    border: none;
-    box-shadow: rgb(0, 65, 65) 4px 2px 1px;
-    font-weight: bolder;
-    font-size: 1.15em;
-}
-
-.btn:hover {
-    background-color: turquoise;
-    color: #fff;
+    margin: 2em 1em;
 }
 
 @media only screen and (min-width: 35em) {
@@ -69,12 +41,12 @@ h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
-    color: rgb(20, 20, 20);
+    color: #fff;
 }
 
 p {
     line-height: 1.6em;
-    color: rgb(12, 12, 12);
+    color: #fff;
 }
 
 
@@ -82,26 +54,16 @@ p {
 
 main {
     margin: 10vh 1em 10vh;
-    background: rgb(243, 243, 243);
-    border-radius: 8px;
 }
 
 .main__hero {
-    position: relative;
-    border: solid 0.01px rgba(68, 68, 68, 0.377);
-    background-color: rgba(68, 68, 68, 0.377);
-    width: 60vw;
-    left: 20%;
-    z-index: 8;
-    top: 20vh;
-    text-align: center;
-    opacity: 0.9;
-    border-radius: 3%;
+    min-height: 40vh;
+    padding-top: 3em;
 }
 
 section {
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 
@@ -141,9 +103,7 @@ nav {
     position: fixed;
     background: rgb(20, 20, 20);
     color: aliceblue;
-    top: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
     z-index: 10;
 }
 
@@ -165,16 +125,11 @@ nav li:hover {
 }
 
 .page__header {
-    background-image: url('img/joshua-sortino-XMcoTHgNcQA-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 1em;
-    min-height: 100vh;
-    position: relative;
+    background: rgb(20, 20, 20);
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 5;
-    color: rgb(243, 243, 243);
+    z-index: 15;
 }
 
 
@@ -209,47 +164,6 @@ nav li:hover {
 }
 
 @media (max-width: 34.99em) {
-    .main__hero {
-        position: relative;
-        width: 35vh;
-        height: 40vh;
-        left: 8%;
-        z-index: 8;
-        top: 35vh;
-        text-align: center;
-        border-radius: 3%;
-    }
-    h1 {
-        position: relative;
-        top: 0vh;
-        font-family: 'Dancing Script', cursive;
-        font-size: 4em;
-    }
-    .slogan {
-        position: relative;
-        top: 0vh;
-        color: rgb(0, 0, 0);
-        font-size: 1.35em;
-        font-family: 'Anton', sans-serif;
-    }
-    .btn {
-        position: relative;
-        cursor: pointer;
-        border-radius: 12px;
-        background-color: #fff;
-        padding: 0.5em;
-        width: 8em;
-        height: 3.5em;
-        top: 1vh;
-        border: none;
-        box-shadow: rgb(0, 65, 65) 4px 2px 1px;
-        font-weight: bolder;
-        font-size: 1.15em;
-    }
-    .btn:hover {
-        background-color: turquoise;
-        color: #fff;
-    }
     .hamBtn {
         position: fixed;
         top: 2%;
@@ -263,6 +177,9 @@ nav li:hover {
     }
     nav ul {
         padding-right: 3em;
+    }
+    #navbar__menu {
+        position: fixed;
     }
 }
 
