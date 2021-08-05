@@ -1,20 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
 /* ---- Base Rules ---- */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: rgb(136, 203, 171);
-    background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
+    background: #fff;
+    background: linear-gradient(0deg, #fff 0%, rgb(204, 203, 203) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
-    color: #fff;
+    color: rgb(20, 20, 20);
 }
 
 
 /* Typeography General*/
 
 h1 {
-    font-family: 'Fira Sans', sans-serif;
+    position: relative;
+    top: -10vh;
+    font-family: 'Dancing Script', cursive;
     font-size: 3em;
-    margin: 2em 1rem;
+}
+
+.slogan {
+    position: relative;
+    top: -22vh;
+    color: rgb(0, 0, 0);
+    font-size: 2.25em;
+    font-family: 'Anton', sans-serif;
+}
+
+.btn {
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 0.5em;
+    width: 8em;
+    height: 3.5em;
+    top: -18vh;
+    border: none;
+    box-shadow: rgb(0, 65, 65) 4px 2px 1px;
+    font-weight: bolder;
+    font-size: 1.15em;
+}
+
+.btn:hover {
+    background-color: turquoise;
+    color: #fff;
 }
 
 @media only screen and (min-width: 35em) {
@@ -28,12 +70,12 @@ h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
-    color: #fff;
+    color: rgb(20, 20, 20);
 }
 
 p {
     line-height: 1.6em;
-    color: #eee;
+    color: rgb(12, 12, 12);
 }
 
 
@@ -41,16 +83,26 @@ p {
 
 main {
     margin: 10vh 1em 10vh;
+    background: rgb(243, 243, 243);
+    border-radius: 8px;
 }
 
-.main-hero {
-    min-height: 40vh;
-    padding-top: 3em;
+.main__hero {
+    position: relative;
+    border: solid 0.01px rgba(68, 68, 68, 0.377);
+    background-color: rgba(68, 68, 68, 0.377);
+    width: 60vw;
+    left: 20%;
+    z-index: 8;
+    top: 20vh;
+    text-align: center;
+    opacity: 0.9;
+    border-radius: 3%;
 }
 
 section {
     position: relative;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
 
@@ -86,12 +138,44 @@ section {
 
 /* Header Styles */
 
-.page__header {
-    background: #fff;
+nav {
     position: fixed;
+    background: rgb(20, 20, 20);
+    color: aliceblue;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+nav li {
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    padding-right: 35px;
+}
+
+nav li:hover {
+    background: aliceblue;
+    color: rgb(20, 20, 20);
+}
+
+.active {
+    background: turquoise;
+    color: rgb(20, 20, 20)
+}
+
+.page__header {
+    background-image: url('img/joshua-sortino-XMcoTHgNcQA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    min-height: 100vh;
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 5;
+    color: rgb(243, 243, 243);
 }
 
 
@@ -122,6 +206,50 @@ section {
     .landing__container {
         max-width: 50em;
         padding: 4em;
+    }
+}
+
+@media (max-width: 34.99em) {
+    .main__hero {
+        position: relative;
+        width: 35vh;
+        height: 40vh;
+        left: 8%;
+        z-index: 8;
+        top: 35vh;
+        text-align: center;
+        border-radius: 3%;
+    }
+    h1 {
+        position: relative;
+        top: 0vh;
+        font-family: 'Dancing Script', cursive;
+        font-size: 4em;
+    }
+    .slogan {
+        position: relative;
+        top: 0vh;
+        color: rgb(0, 0, 0);
+        font-size: 1.35em;
+        font-family: 'Anton', sans-serif;
+    }
+    .btn {
+        position: relative;
+        cursor: pointer;
+        border-radius: 12px;
+        background-color: #fff;
+        padding: 0.5em;
+        width: 8em;
+        height: 3.5em;
+        top: 1vh;
+        border: none;
+        box-shadow: rgb(0, 65, 65) 4px 2px 1px;
+        font-weight: bolder;
+        font-size: 1.15em;
+    }
+    .btn:hover {
+        background-color: turquoise;
+        color: #fff;
     }
 }
 
@@ -182,7 +310,7 @@ section:nth-of-type(3n) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(3n + 1) .landing__container::after {
+section:nth-of-type(3n+1) .landing__container::after {
     content: '';
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
@@ -206,17 +334,17 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 
-section.your-active-class {
+.isActive {
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.your-active-class .landing__container::before {
+.isActive .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.your-active-class .landing__container::after {
+.isActive .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
@@ -231,4 +359,25 @@ section.your-active-class .landing__container::after {
     to {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
     }
+}
+
+.toTopBtn {
+    position: fixed;
+    bottom: 4rem;
+    right: 3rem;
+    color: #333;
+    padding: .5rem;
+    background-color: rgb(201, 201, 201);
+    z-index: 10;
+    display: none;
+    text-decoration: none;
+    font-size: 1.75em;
+    border-radius: 16px;
+    transition: all 800ms ease 200ms;
+    opacity: 0;
+}
+
+.toTopBtn.on {
+    display: flex;
+    opacity: 10;
 }
