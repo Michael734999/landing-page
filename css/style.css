@@ -6,7 +6,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -250,6 +249,20 @@ nav li:hover {
     .btn:hover {
         background-color: turquoise;
         color: #fff;
+    }
+    .hamBtn {
+        position: fixed;
+        top: 2%;
+        right: 4%;
+        z-index: 15;
+        cursor: pointer;
+        font-size: 2em;
+    }
+    .hamBtn:hover {
+        color: aqua;
+    }
+    nav ul {
+        padding-right: 3em;
     }
 }
 

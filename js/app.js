@@ -37,7 +37,7 @@ function nav() {
         li.innerHTML = `<a class="anchor">${listName[x - 1]}</a>`;
 
         li.addEventListener('click', function(event) {
-            event.preventDefault();
+            // event.preventDefault();
             sections[x - 1].scrollIntoView({ behavior: "smooth" });
         });
     };
@@ -77,13 +77,32 @@ function active() {
 };
 
 // Add toTop button
-let toTop = document.getElementById("toTopBtn");
+const toTop = document.getElementById("toTopBtn");
 
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > 100) {
         toTop.classList.add("on");
     } else {
         toTop.classList.remove("on");
+    }
+});
+
+// Add hamburger menu
+const hamBtn = document.getElementById("hamBtn");
+const navBr = document.getElementById("navbar__menu");
+
+
+hamBtn.addEventListener('click', () => {
+    if (hamBtn.className === 'hamBtn closed') {
+        hamBtn.classList.remove('closed');
+        hamBtn.classList.add('open');
+
+        navBr.style.display = "block";
+    } else if (hamBtn.className === 'hamBtn open') {
+        hamBtn.classList.remove('open');
+        hamBtn.classList.add('closed');
+
+        navBr.style.display = "none";
     }
 });
 
