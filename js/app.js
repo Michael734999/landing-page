@@ -51,10 +51,12 @@ function scroll(event) {
     const wh = window.innerHeight;
     const ww = window.innerWidth;
     return (
-        position.top >= 0 &&
-        position.left >= 0 &&
-        position.right <= (ww || document.documentElement.clientWidth) &&
-        position.bottom <= (wh || document.documentElement.clientHeight)
+        // position.top >= 0 &&
+        // position.left >= 0 &&
+        // position.right <= (ww || document.documentElement.clientWidth) &&
+        // position.bottom <= (wh || document.documentElement.clientHeight)
+        position.top < (window.innerHeight / 4) * 2 &&
+        position.bottom >= (window.innerHeight / 4) * 2
     );
 };
 
